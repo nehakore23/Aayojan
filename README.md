@@ -19,12 +19,12 @@ Version Control: Git
 Repository Hosting: GitHub
 
 🚀 Key Highlights of the Aayojan 
-🔐 User Authentication & Authorization
-📅 Event Management
-👤 Profile Management
-🛠️ Admin Controls
-📧 Forgot Password & Email Integration
-📝 Contact & Feedback Forms
-💻 Modern UI
-🔒 Secure Backend
-🛢️ Database Integration:
+  🔐 User Authentication & Authorization
+  📅 Event Management
+  👤 Profile Management
+  🛠️ Admin Controls
+  📧 Forgot Password & Email Integration
+  📝 Contact & Feedback Forms
+  💻 Modern UI
+  🔒 Secure Backend
+  🛢️ Database Integration
