@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dropdown-menu {
+  z-index: 1050;
+  /* Ensure it appears on top */
+}
+
+.navbar {
+  overflow: visible !important;
+}
+
+/* .settings-container h2 {
+  font-size: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+} */
+/* App.css or a global stylesheet */
+
+body[data-theme='light'] {
+  /* Define light theme colors/styles */
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --card-bg: #fff;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --primary-color: #ef6464;
+  --accent-color: #c026d3;
+  --button-text: #fff;
+}
+
+body[data-theme='dark'] {
+  /* Define dark theme colors/styles */
+  --background-color: #23272b;
+  --text-color: #f8f9fa;
+  --card-bg: #2c2f36;
+  --input-bg: #23272b;
+  --input-border: #444857;
+  --primary-color: #ef6464;
+  --accent-color: #c026d3;
+  --button-text: #fff;
+}
+
+/* Apply these CSS variables to your components */
+/* .settings-container {
+  background-color: var(--background-color, #ff6f61); /* Use fallback if variable not set */
+/* color: var(--text-color, #212529); */
+/* ... other styles */
+
+
+/* Also for other elements that need to adapt to the theme */
+/* .card {
+  background-color: var(--card-background-color, #ffffff);
+  color: var(--card-text-color, #212529);
+} */
+/* In App.css or a new Settings.css */
+
+.settings-container {
+  background-color: hsl(5, 24%, 91%);
+  /* The background color you defined inline */
+  min-height: 100vh;
+  display: flex;
+  /* Use flexbox to center content */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  padding-top: 0;
+  /* Remove padding-top from JS */
+}
+
+/* Ensure the Container behaves as a positioning context for the absolute alert */
+.container {
+  position: relative;
+  /* This is crucial for the Alert's absolute positioning */
+  /* Remove the 'top: 100px' inline style from the Container in JS, and manage padding/margin here if needed */
+  padding-top: 60px;
+  /* Add some padding at the top of the container to make space for the alert */
+  padding-bottom: 30px;
+  /* Add some padding at the bottom if needed */
+}
+
+/* Styles for the Card to help fix its dimensions */
+.fixed-card {
+  /* You already have max-width on the container, which helps. */
+  /* If you want a truly fixed height, you might set a min-height or height: */
+  /* min-height: 450px;  Adjust as needed to prevent collapse */
+  /* height: auto; will let it grow with content, but min-height prevents shrinking too much */
+  /* background-color: #ffffff; /* Explicitly set if themes are not applied globally */
+}
+
+/* Style for the Alert to position it absolutely at the top of the container */
+.alert.position-absolute {
+  /* These styles are applied inline in JS, but having them in CSS
+     is generally cleaner for presentation. */
+  /* top: 0px; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* width: 100%; /* Or a specific width like 300px */
+  /* max-width: 600px; /* To prevent it from stretching too wide */
+  /* z-index: 10; /* Ensure it's above other content */
+  padding: 15px;
+  /* Adjust padding as needed */
+  border-radius: .25rem;
+  /* Match Bootstrap default alert border-radius */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  /* Optional: add a subtle shadow */
+}
+
+/* In App.css or a new Settings.css */
+
+.settings-page-wrapper {
+  background-color: #61ddff;
+  /* The background color you defined inline */
+  min-height: 100vh;
+  display: flex;
+  /* Makes it a flex container */
+  flex-direction: column;
+  /* Stacks children vertically */
+  align-items: center;
+  /* Centers children horizontally */
+  padding: 20px 0;
+  /* Add overall top/bottom padding */
+}
+
+/* No specific styling needed for .container beyond Bootstrap's defaults,
+ as we are now using its flex properties. */
+
+.fixed-card {
+  /* min-height: 450px; /* Optional: if you want a minimum height */
+  /* width: 100%; */
+  /* max-width: 450px; /* As defined inline in JS */
+}
+
+/* Alert styles if not already defined for mx-auto and max-width */
+/* .alert {
+  max-width: 720px;
+  margin-bottom: 20px;
+} */

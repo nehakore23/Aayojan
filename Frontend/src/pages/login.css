@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: gradientAnimation 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF5A5F;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #FF5A5F;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.plan-event-btn {
+    background-color: #FF5A5F;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 90, 95, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-event-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 90, 95, 0.4);
+}
+
+.plan-event-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(255, 90, 95, 0.4);
+}
+
+.user-profile {
+    width: 40px;
+    height: 40px;
+    background-color: #FF5A5F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.user-profile:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-icon:hover {
+    transform: rotate(180deg);
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: cardEntrance 0.8s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #2D3748;
+    position: relative;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-card h1::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6B73FF, #000DFF);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A5568;
+    transition: color 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #F7FAFC;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #6B73FF;
+    box-shadow: 0 0 0 4px rgba(107, 115, 255, 0.1);
+    background-color: #fff;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #6B73FF, #000DFF);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(107, 115, 255, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(1px);
+}
+
+.forget-password {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 24px;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.forget-password a {
+    color: #6B73FF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.forget-password a:hover {
+    color: #000DFF;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #A0AEC0;
+}
+
+.divider hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background: #E2E8F0;
+}
+
+.divider span {
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.signup-prompt {
+    text-align: center;
+    margin-top: 20px;
+    color: #4A5568;
+}
+
+.signup-prompt a {
+    color: #6B73FF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.signup-prompt a:hover {
+    color: #000DFF;
+}
+
+.user-icon {
+    color: white;
+    font-size: 20px;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.success {
+    background-color: #C6F6D5;
+    color: #2F855A;
+    border: 1px solid #9AE6B4;
+}
+
+.error {
+    background-color: #FED7D7;
+    color: #C53030;
+    border: 1px solid #FC8181;
+}
+
+/* Google button refinements */
+.google-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*!* Input field animations *!*/
+/*@keyframes shake {*/
+/*    0%, 100% {transform: translateX(0);}*/
+/*    10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}*/
+/*    20%, 40%, 60%, 80% {transform: translateX(5px);}*/
+/*}*/
+
+input:invalid:focus {
+    animation: shake 0.5s;
+    border-color: #ff4146;
+}
+
+/* Mobile menu for navigation */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    color: #FF5A5F;
+    transform: scale(1.1);
+}
+
+/* Enhanced Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo-img {
+        height: 30px;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        gap: 15px;
+        animation: menuSlideDown 0.4s ease forwards;
+        transform-origin: top center;
+    }
+
+    @keyframes menuSlideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .right-menu {
+        gap: 10px;
+    }
+
+    .plan-event-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .user-profile {
+        width: 35px;
+        height: 35px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    .login-card h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Smaller mobile phones */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo-img {
+        height: 25px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .login-card {
+        padding: 20px 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .plan-event-btn {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}
+
+/* JavaScript for mobile menu toggle - Add this to your HTML file if needed
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+});
+*/

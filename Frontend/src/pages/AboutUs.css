@@ -1,0 +1,584 @@
+/* Hover effect for social icons in team section */
+.team-card .social-links i {
+    transition: color 0.2s, transform 0.2s;
+    color: #555;
+    font-size: 1.3rem;
+}
+
+.team-card .social-links i:hover {
+    color: #0d6efd;
+    transform: scale(1.2) rotate(-8deg);
+}
+
+/* Scroll-based animation for Features List cards */
+.ezy__featured48-card {
+    border-radius: 0;
+    border: none;
+    color: #000;
+}
+
+/* Gallery hover effect for AboutUs.jsx */
+.MDBContainer img,
+.container img {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.MDBContainer img:hover,
+.container img:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(13, 110, 253, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+}
+
+/* Responsive styles for AboutUs page */
+@media (max-width: 767.98px) {
+
+    .carousel-img-margin,
+    .carousel-img-margin img,
+    .carousel-item img {
+        height: 220px !important;
+        object-fit: cover !important;
+    }
+
+    .ezy__about13 {
+        padding: 30px 0;
+    }
+
+    .ezy__about13-heading {
+        font-size: 24px;
+    }
+
+    .ezy__about13-sub-heading {
+        font-size: 14px;
+    }
+
+    .ezy__about13 img,
+    .ezy__about13-img2 {
+        width: 100% !important;
+        height: 180px !important;
+        left: 0 !important;
+        top: 0 !important;
+        position: static !important;
+        margin-bottom: 10px;
+        display: block !important;
+        transform: none !important;
+    }
+
+    .ezy__about13-bg-holder {
+        display: none;
+    }
+
+    .ezy__featured48 {
+        padding: 30px 0;
+    }
+
+    .ezy__featured48-heading {
+        font-size: 20px;
+    }
+
+    .ezy__featured48-sub-heading {
+        font-size: 13px;
+    }
+
+    .ezy__featured48-title {
+        font-size: 16px;
+    }
+
+    .ezy__featured48-content {
+        font-size: 13px;
+    }
+
+    .ezy__featured48-list [class*="col-"] {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 16px;
+    }
+
+    .ezy__team10 {
+        padding: 30px 0;
+    }
+
+    .ezy__team10-heading {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .ezy__team10-sub-heading {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .ezy__team10-item {
+        margin-bottom: 24px;
+        padding: 12px 6px !important;
+    }
+
+    .ezy__team10-item>img {
+        width: 90px !important;
+        height: 90px !important;
+        margin-top: -45px;
+        padding: 2px;
+    }
+
+    .ezy__team10-content h4 {
+        font-size: 16px;
+    }
+
+    .ezy__team10-content p {
+        font-size: 12px;
+    }
+
+    .ezy__team10-social-links a {
+        font-size: 16px;
+        margin: 0 4px;
+    }
+
+    .review-card {
+        padding: 1rem !important;
+        min-width: 0;
+    }
+
+    .review-card img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .review-card h5 {
+        font-size: 15px;
+    }
+
+    .review-card p,
+    .review-card span {
+        font-size: 12px !important;
+    }
+
+    .white-background.text-center.py-2 {
+        padding: 10px 0 !important;
+    }
+
+    .my-3,
+    .my-4 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .container,
+    .MDBContainer {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+/* Add margin to move carousel image down */
+.carousel-img-margin {
+    margin-top: 1px;
+    /* Adjust this value as needed */
+}
+
+/* Define CSS Variables */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+}
+
+/* Global body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff !important;
+}
+
+/* Force AboutUs main sections to have white background */
+.about-section,
+.ezy__about13,
+.ezy__featured48,
+.ezy__team10,
+.white-background,
+.review-card,
+.container,
+.MDBContainer {
+    background: #fff !important;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 40px 0;
+}
+
+/* Glass Card Styles */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Card Styles */
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.team-member-img {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-member-img {
+    transform: scale(1.05);
+}
+
+/* Review Card Styles */
+.review-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.review-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.ezy__about13 {
+    /* Bootstrap variables */
+    --bs-body-color: #1e2329;
+    --bs-body-bg: rgb(255, 255, 255);
+
+    /* Easy Frontend variables */
+    --ezy-theme-color: rgb(13, 110, 253);
+    --ezy-theme-color-rgb: 13, 110, 253;
+
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    overflow: hidden;
+    padding: 60px 0;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .ezy__about13 {
+        padding: 100px 0;
+    }
+}
+
+/* Gray Block Style */
+.gray .ezy__about13,
+.ezy__about13.gray {
+    /* Bootstrap variables */
+    --bs-body-bg: rgb(246, 246, 246);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__about13,
+.ezy__about13.dark-gray {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(30, 39, 53);
+}
+
+/* Dark Block Style */
+.dark .ezy__about13,
+.ezy__about13.dark {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(11, 23, 39);
+}
+
+.ezy__about13-heading {
+    font-size: 35px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .ezy__about13-heading {
+        font-size: 55px;
+    }
+}
+
+.ezy__about13-sub-heading {
+    font-size: 17px;
+    line-height: 1.5;
+    opacity: 0.75;
+}
+
+.ezy__about13-divider {
+    width: 100px;
+    height: 3px !important;
+    color: var(--bs-body-color);
+    opacity: 1;
+}
+
+.ezy__about13 img {
+    transform: rotate(45deg);
+    position: relative;
+    top: 60px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.ezy__about13-img2 {
+    top: -400px;
+    left: 300px !important;
+    position: absolute !important;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .ezy__about13-img2 {
+        display: block;
+    }
+}
+
+@media (min-width: 991px) {
+    .ezy__about13 img {
+        transform: rotate(45deg);
+        position: relative;
+        left: 100px;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .ezy__about13-img2 {
+        top: 0px !important;
+        left: 100px !important;
+        position: relative !important;
+    }
+}
+
+.ezy__about13-bg-holder {
+    width: 36vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(var(--ezy-theme-color-rgb), 0.3);
+    float: left;
+}
+
+.ezy__featured48 {
+    --bs-body-color: #000;
+    --bs-body-bg: rgb(255, 255, 255);
+
+    /* easy frontend variables */
+    --ezy-theme-color: rgb(13, 110, 253);
+    --ezy-theme-color-rgb: 13, 110, 253;
+
+    background-color: var(--bs-body-bg);
+    padding: 60px 0;
+}
+
+@media (min-width: 768px) {
+    .ezy__featured48 {
+        padding: 100px 0;
+    }
+}
+
+/* Gray Block Style */
+.gray .ezy__featured48,
+.ezy__featured48.gray {
+    /* Bootstrap variables */
+    --bs-body-bg: rgb(246, 246, 246);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__featured48,
+.ezy__featured48.dark-gray {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(30, 39, 53);
+}
+
+/* Dark Block Style */
+.dark .ezy__featured48,
+.ezy__featured48.dark {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(11, 23, 39);
+}
+
+.ezy__featured48-heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--bs-body-color);
+}
+
+@media (min-width: 768px) {
+    .ezy__featured48-heading {
+        font-size: 45px;
+    }
+}
+
+.ezy__featured48-sub-heading {
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--bs-body-color);
+    opacity: 0.8;
+}
+
+/* card */
+.ezy__featured48-card {
+    border-radius: 0;
+    border: none;
+    color: #000;
+}
+
+.ezy__featured48-list [class*="col-"]:nth-of-type(1n) .ezy__featured48-card {
+    background-color: #f2eefe;
+}
+
+.ezy__featured48-list [class*="col-"]:nth-of-type(2n) .ezy__featured48-card {
+    background-color: #ecf6fd;
+}
+
+.ezy__featured48-list [class*="col-"]:nth-of-type(3n) .ezy__featured48-card {
+    background-color: #fff3f1;
+}
+
+.ezy__featured48-list [class*="col-"]:nth-of-type(4n) .ezy__featured48-card {
+    background-color: #f5ffe7;
+}
+
+.ezy__featured48-icon {
+    font-size: 30px;
+}
+
+.ezy__featured48-title {
+    font-size: 22px;
+}
+
+.ezy__featured48-content {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.ezy__team10 {
+    /* Bootstrap variables */
+    --bs-body-color: #212529;
+    --bs-body-bg: rgb(255, 255, 255);
+
+    /* Easy Frontend variables */
+    --ezy-theme-color: rgb(13, 110, 253);
+    --ezy-theme-color-rgb: 13, 110, 253;
+    --ezy-item-bg: #ffffff;
+    --ezy-item-shadow: 0px 4px 44px rgba(159, 190, 218, 0.37);
+
+    background: var(--bs-body-bg);
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+@media (min-width: 768px) {
+    .ezy__team10 {
+        padding: 100px 0;
+    }
+}
+
+/* Gray Block Style */
+.gray .ezy__team10,
+.ezy__team10.gray {
+    /* Bootstrap variables */
+    --bs-body-bg: rgb(246, 246, 246);
+
+    /* Easy Frontend variables */
+    --ezy-item-bg: #fff;
+    --ezy-item-shadow: 0px 4px 44px rgba(198, 222, 243, 0.37);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__team10,
+.ezy__team10.dark-gray {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(30, 39, 53);
+
+    /* Easy Frontend variables */
+    --ezy-item-bg: rgb(11, 23, 39);
+    --ezy-item-shadow: none;
+}
+
+/* Dark Block Style */
+.dark .ezy__team10,
+.ezy__team10.dark {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(11, 23, 39);
+
+    /* Easy Frontend variables */
+    --ezy-item-bg: rgb(30, 39, 53);
+    --ezy-item-shadow: none;
+}
+
+.ezy__team10-heading {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: var(--bs-body-color);
+}
+
+@media (min-width: 768px) {
+    .ezy__team10-heading {
+        font-size: 45px;
+        line-height: 45px;
+    }
+}
+
+.ezy__team10-sub-heading {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--bs-body-color);
+}
+
+.ezy__team10-item {
+    background-color: var(--ezy-item-bg);
+    border-radius: 15px;
+    box-shadow: var(--ezy-item-shadow);
+    transition: transform 0.25s ease-in-out;
+}
+
+.ezy__team10-item:hover {
+    transform: translateY(-5px);
+}
+
+.ezy__team10-item>img {
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: -85px;
+    border-color: var(--ezy-theme-color) !important;
+}
+
+.ezy__team10-content * {
+    color: var(--bs-body-color);
+}
+
+.ezy__team10-social-links a {
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.ezy__team10-social-links a:hover {
+    transform: translateY(5px);
+    color: var(--bs-body-color);
+    opacity: 1;
+}
+
+
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
